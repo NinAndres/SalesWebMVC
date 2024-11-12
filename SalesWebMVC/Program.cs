@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using SalesWebMVC;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Configure services to use ApplicationDbContext with MySQL
 var connectionString = builder.Configuration.GetConnectionString("SalesWebMVCContext");
 builder.Services.AddDbContext<SalesWebMVCContext>(options =>
